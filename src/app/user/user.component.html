@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <h1>User Sport Buddy</h1>
+        <div class="col-md-5">
+            <div class="col-md-12">
+                <button class="btn btn-dark" (click)="onSelect('all-sports')">All Sports</button>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-dark" (click)="onSelect('add-sports')">Add Sports</button>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-dark" (click)="onSelect('my-sports')">My Sports</button>
+            </div>
+        </div>
+        <div class="col-md-7" *ngIf="btnSelectedType === 'all-sports'">
+            <cx-all-sports></cx-all-sports>
+        </div>
+        <div class="col-md-7" *ngIf="btnSelectedType === 'add-sports'">
+            <cx-add-sports></cx-add-sports>
+        </div>
+        <div class="col-md-7" *ngIf="btnSelectedType === 'my-sports'">
+            <cx-my-sports></cx-my-sports>
+        </div>
+    </div>
+</div>
