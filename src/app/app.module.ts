@@ -8,6 +8,9 @@ import { RouterModule } from "@angular/router";
 import { routes } from "./app.routes";
 import { HeaderModule } from "./header/header.module";
 import { UserModule } from "./user/user.module";
+import { RegisterUserModule } from "./register-user/register-user.module";
+import { AuthService } from "./service/auth.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,12 +19,14 @@ import { UserModule } from "./user/user.module";
         BrowserModule,
         FormsModule,
         HeaderModule,
+        RegisterUserModule,
         LoginModule,
         AdminModule,
         UserModule,
+        HttpClientModule,
         RouterModule.forRoot(routes),
     ],
-    providers: [],
+    providers: [AuthService],
     exports: [RouterModule]
 
 })

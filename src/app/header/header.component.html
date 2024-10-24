@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light" *ngIf="isNavRequired">
     <div class="container-fluid">
         <a class="navbar-brand">Sports Buddy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -11,9 +11,12 @@
                     <a class="nav-link" [routerLink]="['login']">Login</a>
                 </li>
                 <li class="nav-item" routerLinkActive="router-link-active">
+                    <a class="nav-link" [routerLink]="['register']">Create-User</a>
+                </li>
+                <li class="nav-item" routerLinkActive="router-link-active" *ngIf="isAdmin">
                     <a class="nav-link" [routerLink]="['admin']">Admin</a>
                 </li>
-                <li class="nav-item" routerLinkActive="router-link-active">
+                <li class="nav-item" routerLinkActive="router-link-active" *ngIf="!isAdmin">
                     <a class="nav-link" [routerLink]="['user']">User</a>
                 </li>
                 <li class="nav-item navbar-right">

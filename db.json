@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "id": "tahreem.imam@gmail.com",
+      "name": "Tahreem Imam",
+      "password": "1234",
+      "mobile": 9821457646,
+      "address1": "Front of pappu communication barula main market",
+      "address2": "Sector 49",
+      "pincode": 201301,
+      "city": "Noida",
+      "gender": "female",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "tahreem@gmail.com",
+      "name": "Tahreem Imam",
+      "password": "12345",
+      "mobile": 9821457646,
+      "address1": "Front of pappu communication barula main market",
+      "address2": "Sector 49",
+      "pincode": 201301,
+      "city": "Noida",
+      "gender": "female",
+      "role": "user",
+      "isActive": true
+    }
+  ],
+  "role":[
+    {
+      "code":"user",
+      "name":"User"
+    },
+    {
+      "code":"admin",
+      "name":"Admin"
+    }
+  ]
+}
