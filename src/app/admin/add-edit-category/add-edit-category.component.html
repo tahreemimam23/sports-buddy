@@ -1,1 +1,29 @@
-<p>add-edit-category works!</p>
+<form [formGroup]="createCategoryForm" (ngSubmit)="!isUpdating?createCategory():updateCategory()">
+    <div class="form-group mb-3">
+        <label for="category">Category</label>
+        <input type="text" id="category" formControlName="category" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary me-2" *ngIf="!isUpdating">Create Category</button>
+    <button type="submit" class="btn btn-primary me-2" *ngIf="isUpdating">Update Category</button>
+</form>
+<ng-container *ngIf="categories$ |async as categories">
+    <table class="table mt-5">
+        <thead>
+            <tr class="table-dark">
+                <th>Category</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let category of categories">
+                <tr class="table-success">
+                    <td>{{category.category}}</td>
+                    <td>
+                        <button class="btn btn-danger me-2 float-end" (click)="deleteCategory(category.id)">Delete</button>
+                        <button class="btn btn-warning me-2 float-end" (click)="editCategory(category.id)">Edit</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-container>

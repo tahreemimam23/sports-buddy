@@ -4,6 +4,8 @@ import { AdminComponent } from './admin.component';
 import { AddEditAreaComponent } from './add-edit-area/add-edit-area.component';
 import { AddEditCategoryComponent } from './add-edit-category/add-edit-category.component';
 import { AddEditCityComponent } from './add-edit-city/add-edit-city.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,10 +14,13 @@ import { AddEditCityComponent } from './add-edit-city/add-edit-city.component';
     AdminComponent,
     AddEditAreaComponent,
     AddEditCategoryComponent,
-    AddEditCityComponent
+    AddEditCityComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [AdminComponent]
 })

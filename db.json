@@ -25,16 +25,69 @@
       "gender": "female",
       "role": "user",
       "isActive": true
-    }
-  ],
-  "role":[
-    {
-      "code":"user",
-      "name":"User"
     },
     {
-      "code":"admin",
-      "name":"Admin"
+      "id": "tahreem.imam1@gmail.com",
+      "name": "Tahreem Imam",
+      "password": "1245",
+      "mobile": 9821457646,
+      "address1": "Front of pappu communication barula main market",
+      "address2": "Sector 49",
+      "pincode": 201301,
+      "city": "Noida",
+      "gender": "female",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "tahreem.imam23@gmail.com",
+      "name": "Tahreem Imam",
+      "password": "1233",
+      "mobile": 9821457646,
+      "category": "[object Object]",
+      "address1": "Front of pappu communication barula main market",
+      "address2": "Sector 49",
+      "pincode": 201301,
+      "city": "Noida",
+      "gender": "female",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "tahreem.imam32@gmail.com",
+      "name": "Tahreem Imam",
+      "password": "1256",
+      "mobile": 9821457646,
+      "category": "Tennis",
+      "address1": "Front of pappu communication barula main market",
+      "address2": "Sector 49",
+      "pincode": 201301,
+      "city": "Noida",
+      "gender": "female",
+      "role": "",
+      "isActive": false
     }
-  ]
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "admin",
+      "name": "Admin"
+    }
+  ],
+  "categories": [
+    {
+      "category": "Tennis",
+      "id": 1
+    },
+    {
+      "category": "Badminton",
+      "id": 2
+    }
+  ],
+  "areas": [],
+  "cities": []
 }

@@ -1,1 +1,29 @@
-<p>add-edit-city works!</p>
+<form [formGroup]="createCityForm" (ngSubmit)="!isUpdating?createCity():updateCity()">
+    <div class="form-group mb-3">
+        <label for="city">City</label>
+        <input type="text" id="city" formControlName="city" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary me-2" *ngIf="!isUpdating">Create City</button>
+    <button type="submit" class="btn btn-primary me-2" *ngIf="isUpdating">Update City</button>
+</form>
+<ng-container *ngIf="cities$ |async as cities">
+    <table class="table mt-5">
+        <thead>
+            <tr class="table-dark">
+                <th>City</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let city of cities">
+                <tr class="table-success">
+                    <td>{{city.city}}</td>
+                    <td>
+                        <button class="btn btn-danger me-2 float-end" (click)="deleteCity(city.id)">Delete</button>
+                        <button class="btn btn-warning me-2 float-end" (click)="editCity(city.id)">Edit</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-container>

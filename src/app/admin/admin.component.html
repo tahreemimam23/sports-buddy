@@ -1,25 +1,30 @@
 <div class="container">
     <div class="row">
-        <h1>Admin Sport Buddy</h1>
-        <div class="col-md-5">
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('category')">Add/Edit Category</button>
+        <h1 class="text-center mt-2">Admin Panel</h1>
+        <div class="col-md-3 mt-2 pt-5 pb-5 border border-primary border-right">
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('category')">Add/Edit Category</button>
             </div>
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('city')">Add/Edit City</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('city')">Add/Edit City</button>
             </div>
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('area')">Add/Edit Area</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('area')">Add/Edit Area</button>
             </div>
         </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'category'">
-            <cx-add-edit-category></cx-add-edit-category>
+        <div class="col-md-1 d-flex" style="height: 400px;">
+            <div class="vr"></div>
         </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'city'">
-            <cx-add-edit-city></cx-add-edit-city>
-        </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'area'">
-            <cx-add-edit-area></cx-add-edit-area>
+        <div class="col-md-8 mt-2 ps-2">
+            <div *ngIf="btnSelectedType === 'category'">
+                <cx-add-edit-category></cx-add-edit-category>
+            </div>
+            <div *ngIf="btnSelectedType === 'city'">
+                <cx-add-edit-city></cx-add-edit-city>
+            </div>
+            <div *ngIf="btnSelectedType === 'area'">
+                <cx-add-edit-area></cx-add-edit-area>
+            </div>
         </div>
     </div>
 </div>

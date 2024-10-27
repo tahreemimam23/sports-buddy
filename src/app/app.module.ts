@@ -11,6 +11,9 @@ import { UserModule } from "./user/user.module";
 import { RegisterUserModule } from "./register-user/register-user.module";
 import { AuthService } from "./service/auth.service";
 import { HttpClientModule } from "@angular/common/http";
+import { CityService } from "./service/city.service";
+import { CategoryService } from "./service/category.service";
+import { AreaService } from "./service/area.service";
 
 @NgModule({
     declarations: [AppComponent],
@@ -26,7 +29,12 @@ import { HttpClientModule } from "@angular/common/http";
         HttpClientModule,
         RouterModule.forRoot(routes),
     ],
-    providers: [AuthService],
+    providers: [
+        AuthService, 
+        CityService,
+        CategoryService,
+        AreaService
+    ],
     exports: [RouterModule]
 
 })

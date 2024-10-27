@@ -1,1 +1,50 @@
-<p>add-edit-area works!</p>
+<form [formGroup]="createAreaForm" (ngSubmit)="!isUpdating?createArea():updateArea()">
+    <ng-container *ngIf="cities$ | async as cities">
+        <ng-container *ngIf="cities.length !== 0; else noCites">
+            <div class="form-group mb-3">
+                <label for="city">City</label>
+                <select type="text" id="city" formControlName="city" class="form-select">
+                    <option *ngFor="let city of cities" [value]="city.city">
+                        {{ city.city }}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <label for="area">Area</label>
+                <input type="text" id="area" formControlName="area" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary me-2" *ngIf="!isUpdating">Create Area</button>
+            <button type="submit" class="btn btn-primary me-2" *ngIf="isUpdating">Update Area</button>
+        </ng-container>
+        <ng-template #noCites>
+            <p>No city available. Area cannot be created without city. Please add city first.</p>
+            <a [routerLink]="['city']" role="button" class="btn btn-primary">Add City</a>
+        </ng-template>
+    </ng-container>
+</form>
+<ng-container *ngIf="areas$ |async as areas">
+    <ng-container *ngIf="areas.length > 0; else noArea">
+        <table class="table mt-5">
+            <thead>
+                <tr class="table-dark">
+                    <th>Category</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let area of areas">
+                    <tr class="table-success">
+                        <td>{{area.area}}</td>
+                        <td>
+                            <button class="btn btn-danger me-2 float-end" (click)="deleteArea(area.id)">Delete</button>
+                            <button class="btn btn-warning me-2 float-end" (click)="editArea(area.id)">Edit</button>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </ng-container>
+    <ng-template #noArea>
+        <p>No area added to the list, kindly create new area</p>
+    </ng-template>
+</ng-container>
