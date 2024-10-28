@@ -1,43 +1,51 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { userDetails } from '../model/user-details.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  userDetails: userDetails;
   baseApi = "http://localhost:3000/user"
+
   constructor(private http: HttpClient) { }
+
+  setUserDetails(userData) {
+    this.userDetails = new userDetails(userData.name, userData.id, userData.city)
+    return this.userDetails
+  }
 
   //return all data via get method
   getUsers() {
     return this.http.get(this.baseApi)
   }
 
-  getUserById(id:any){
-    return this.http.get(this.baseApi+'/'+id);
+  getUserById(id: any) {
+    return this.http.get(this.baseApi + '/' + id);
   }
 
-  registerUser(userData:FormGroup){
-    return this.http.post(this.baseApi,userData.value);
+  registerUser(userData: FormGroup) {
+    return this.http.post(this.baseApi, userData.value);
   }
 
-  updateUser(id:any, updatedUserData:any){
-    return this.http.put(this.baseApi+'/'+id,updatedUserData)
+  updateUser(id: any, updatedUserData: any) {
+    return this.http.put(this.baseApi + '/' + id, updatedUserData)
   }
 
   //get user email
-  isLoggedIn(){
-    return sessionStorage.getItem('email')!=null;
+  isLoggedIn() {
+    return sessionStorage.getItem('email') != null;
   }
 
   //get roles
-  getUserRole(){
-    return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
+  getUserRole() {
+    return sessionStorage.getItem('role') != null ? sessionStorage.getItem('role')?.toString() : '';
   }
 
   //get all roles
-  getAllRole(){
+  getAllRole() {
     return this.http.get(" http://localhost:3000/role")
   }
 }

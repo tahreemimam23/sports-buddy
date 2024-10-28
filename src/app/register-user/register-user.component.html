@@ -22,10 +22,25 @@
             <div class="form-group mb-3">
                 <label for="email">Email</label>
                 <input type="email" id="email" formControlName="id" class="form-control">
+                <span
+                    *ngIf="formControls?.['id'].invalid && (formControls?.['id'].dirty || formControls?.['id'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['id'].errors?.['required']">
+                        This field is required.
+                    </p>
+                    <p class="text-danger" *ngIf="formControls?.['id'].errors?.['email']">
+                        Please check email format
+                    </p>
+                </span>
             </div>
             <div class="form-group mb-3">
                 <label for="name">Name</label>
                 <input type="text" id="name" formControlName="name" class="form-control">
+                <span
+                    *ngIf="formControls?.['name'].invalid && (formControls?.['name'].dirty || formControls?.['name'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['name'].errors?.['required']">
+                        This field is required.
+                    </p>
+                </span>
             </div>
             <div class="form-group mb-3">
                 <label for="password">Password</label>
@@ -33,7 +48,16 @@
             </div>
             <div class="form-group mb-3">
                 <label for="mobile">Mobile</label>
-                <input type="number" id="mobile" formControlName="mobile" class="form-control">
+                <input type="text" id="mobile" formControlName="mobile" class="form-control">
+                <span
+                    *ngIf="formControls?.['mobile'].invalid && (formControls?.['mobile'].dirty || formControls?.['mobile'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['mobile'].errors?.['required']">
+                        This field is required.
+                    </p>
+                    <p class="text-danger" *ngIf="formControls?.['mobile'].errors?.['maxlength']">
+                        10 digits allowed
+                    </p>
+                </span>
             </div>
             <ng-container *ngIf="categories$ | async as categories">
                 <div class="form-group mb-3">
@@ -53,6 +77,12 @@
             <div class="form-group mb-3">
                 <label for="address1">Address1</label>
                 <input type="text" id="address1" formControlName="address1" class="form-control">
+                <span
+                    *ngIf="formControls?.['address1'].invalid && (formControls?.['address1'].dirty || formControls?.['address1'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['address1'].errors?.['required']">
+                        This field is required.
+                    </p>
+                </span>
             </div>
             <div class="form-group mb-3">
                 <label for="address2">Address2</label>
@@ -60,11 +90,26 @@
             </div>
             <div class="form-group mb-3">
                 <label for="pincode">Pincode</label>
-                <input type="number" id="pincode" formControlName="pincode" class="form-control">
+                <input type="text" id="pincode" formControlName="pincode" class="form-control">
+                <span
+                    *ngIf="formControls?.['pincode'].invalid && (formControls?.['pincode'].dirty || formControls?.['pincode'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['pincode'].errors?.['required']">
+                        This field is required.
+                    </p>
+                    <p class="text-danger" *ngIf="formControls?.['pincode'].errors?.['maxlength']">
+                        max 10 digits allowed
+                    </p>
+                </span>
             </div>
             <div class="form-group mb-3">
                 <label for="city">City</label>
                 <input type="text" id="city" formControlName="city" class="form-control">
+                <span
+                    *ngIf="formControls?.['city'].invalid && (formControls?.['city'].dirty || formControls?.['city'].touched)">
+                    <p class="text-danger" *ngIf="formControls?.['city'].errors?.['required']">
+                        This field is required.
+                    </p>
+                </span>
             </div>
             <div class="form-group mb-3">
                 <label for="gender">Gender</label>

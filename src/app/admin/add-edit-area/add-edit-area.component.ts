@@ -21,6 +21,7 @@ export class AddEditAreaComponent implements OnInit {
   constructor(private service: AreaService,private cityService: CityService, private router: Router) { }
   ngOnInit(): void {
     this.cities$ = this.cityService.getAllCity();
+    this.createAreaForm.setControl('city', new FormControl('', [Validators.required]));
     this.createAreaForm.setControl('area', new FormControl('', [Validators.required]));
     this.createAreaForm.setControl('id', new FormControl(''));
     this.getAllArea();

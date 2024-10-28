@@ -24,11 +24,11 @@ export class RegisterUserComponent implements OnInit {
     this.userRegistrationForm.setControl('id', new FormControl('', [Validators.required, Validators.email]));
     this.userRegistrationForm.setControl('name', new FormControl('', [Validators.required]));
     this.userRegistrationForm.setControl('password', new FormControl('', [Validators.required]));
-    this.userRegistrationForm.setControl('mobile', new FormControl('', [Validators.required]));
+    this.userRegistrationForm.setControl('mobile', new FormControl('', [Validators.required,Validators.maxLength(10)]));
     this.userRegistrationForm.setControl('category', new FormControl('', [Validators.required]));
     this.userRegistrationForm.setControl('address1', new FormControl('', [Validators.required]));
     this.userRegistrationForm.setControl('address2', new FormControl('', [Validators.required]));
-    this.userRegistrationForm.setControl('pincode', new FormControl('', [Validators.required]));
+    this.userRegistrationForm.setControl('pincode', new FormControl('', [Validators.required,Validators.maxLength(6)]));
     this.userRegistrationForm.setControl('city', new FormControl('', [Validators.required]));
     this.userRegistrationForm.setControl('gender', new FormControl('female', [Validators.required]));
     this.userRegistrationForm.setControl('role', new FormControl('user'));
@@ -45,5 +45,8 @@ export class RegisterUserComponent implements OnInit {
     }else{
       alert("please enter valid data")
     }
+  }
+  get formControls() {
+    return this.userRegistrationForm['controls'];
   }
 }

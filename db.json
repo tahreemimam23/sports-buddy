@@ -3,69 +3,30 @@
     {
       "id": "tahreem.imam@gmail.com",
       "name": "Tahreem Imam",
-      "password": "1234",
-      "mobile": 9821457646,
+      "password": "12345",
+      "mobile": "9821457646",
+      "category": "Tennis",
       "address1": "Front of pappu communication barula main market",
       "address2": "Sector 49",
-      "pincode": 201301,
+      "pincode": "201301",
       "city": "Noida",
       "gender": "female",
       "role": "admin",
       "isActive": true
     },
     {
-      "id": "tahreem@gmail.com",
+      "id": "tahreem.imam1@gmail.com",
       "name": "Tahreem Imam",
-      "password": "12345",
-      "mobile": 9821457646,
+      "password": "123456",
+      "mobile": "8214576462",
+      "category": "Badminton",
       "address1": "Front of pappu communication barula main market",
       "address2": "Sector 49",
-      "pincode": 201301,
+      "pincode": "201301",
       "city": "Noida",
       "gender": "female",
       "role": "user",
       "isActive": true
-    },
-    {
-      "id": "tahreem.imam1@gmail.com",
-      "name": "Tahreem Imam",
-      "password": "1245",
-      "mobile": 9821457646,
-      "address1": "Front of pappu communication barula main market",
-      "address2": "Sector 49",
-      "pincode": 201301,
-      "city": "Noida",
-      "gender": "female",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "tahreem.imam23@gmail.com",
-      "name": "Tahreem Imam",
-      "password": "1233",
-      "mobile": 9821457646,
-      "category": "[object Object]",
-      "address1": "Front of pappu communication barula main market",
-      "address2": "Sector 49",
-      "pincode": 201301,
-      "city": "Noida",
-      "gender": "female",
-      "role": "",
-      "isActive": false
-    },
-    {
-      "id": "tahreem.imam32@gmail.com",
-      "name": "Tahreem Imam",
-      "password": "1256",
-      "mobile": 9821457646,
-      "category": "Tennis",
-      "address1": "Front of pappu communication barula main market",
-      "address2": "Sector 49",
-      "pincode": 201301,
-      "city": "Noida",
-      "gender": "female",
-      "role": "",
-      "isActive": false
     }
   ],
   "role": [
@@ -88,6 +49,68 @@
       "id": 2
     }
   ],
-  "areas": [],
-  "cities": []
+  "areas": [
+    {
+      "city": "Noida",
+      "area": "Sector 49",
+      "id": 1
+    },
+    {
+      "city": "Bengaluru",
+      "area": "Marathalli",
+      "id": 2
+    }
+  ],
+  "cities": [
+    {
+      "city": "Noida",
+      "id": 1
+    },
+    {
+      "city": "Bengaluru",
+      "id": 2
+    }
+  ],
+  "sports": [
+    {
+      "city": "Noida",
+      "area": "Sector 49",
+      "sportsType": "Tennis",
+      "date": "2024-10-31",
+      "time": "02:10",
+      "mobile": "9319827333",
+      "WhatsappNumber": "9319827333",
+      "id": 1
+    },
+    {
+      "city": "Bengaluru",
+      "area": "Marathalli",
+      "sportsType": "Badminton",
+      "date": "2024-10-29",
+      "time": "01:11",
+      "mobile": "09821457646",
+      "WhatsappNumber": "9319827333",
+      "id": 2
+    },
+    {
+      "city": "Noida",
+      "area": "Sector 49",
+      "sportsType": "Tennis",
+      "date": "2024-10-29",
+      "time": "04:18",
+      "mobile": "09319827333",
+      "WhatsappNumber": "9319827333",
+      "id": 3
+    },
+    {
+      "city": "Noida",
+      "area": "Sector 49",
+      "sportsType": "Tennis",
+      "date": "2024-10-10",
+      "time": "02:21",
+      "mobile": "09319827333",
+      "WhatsappNumber": "9319827333",
+      "id": 4
+    }
+  ]
 }

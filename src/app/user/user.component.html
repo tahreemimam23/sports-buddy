@@ -1,25 +1,30 @@
 <div class="container">
     <div class="row">
-        <h1>User Sport Buddy</h1>
-        <div class="col-md-5">
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('all-sports')">All Sports</button>
+        <h1 class="text-center mt-2">User Panel</h1>
+        <div class="col-md-3 mt-2 pt-5 pb-5 border border-primary border-right">
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('all-sports')">All Sports</button>
             </div>
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('add-sports')">Add Sports</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('add-sports')">Add Sports</button>
             </div>
-            <div class="col-md-12">
-                <button class="btn btn-dark" (click)="onSelect('my-sports')">My Sports</button>
+            <div class="d-grid gap-2">
+                <button class="btn btn-dark mb-3" (click)="onSelect('my-sports')">My Sports</button>
             </div>
         </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'all-sports'">
-            <cx-all-sports></cx-all-sports>
+        <div class="col-md-1 d-flex" style="height: 400px;">
+            <div class="vr"></div>
         </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'add-sports'">
-            <cx-add-sports></cx-add-sports>
-        </div>
-        <div class="col-md-7" *ngIf="btnSelectedType === 'my-sports'">
-            <cx-my-sports></cx-my-sports>
+        <div class="col-md-8 mt-2 ps-2">
+            <div class="col-md-7" *ngIf="btnSelectedType === 'all-sports'">
+                <cx-all-sports></cx-all-sports>
+            </div>
+            <div class="col-md-7" *ngIf="btnSelectedType === 'add-sports'">
+                <cx-add-sports></cx-add-sports>
+            </div>
+            <div class="col-md-7" *ngIf="btnSelectedType === 'my-sports'">
+                <cx-my-sports></cx-my-sports>
+            </div>
         </div>
     </div>
 </div>

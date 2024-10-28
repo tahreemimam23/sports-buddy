@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
-import { User } from '../model/user.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,6 +32,7 @@ export class LoginComponent implements OnInit{
             if(this.userData.role == 'admin'){
               this.router.navigate(['admin'])
             }else if(this.userData.role=='user'){
+              this.service.setUserDetails(this.userData)
               this.router.navigate(['user'])
             }
           }else{

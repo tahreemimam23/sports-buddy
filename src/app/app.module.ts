@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { CityService } from "./service/city.service";
 import { CategoryService } from "./service/category.service";
 import { AreaService } from "./service/area.service";
+import { UserService } from "./service/user.service";
 
 @NgModule({
     declarations: [AppComponent],
@@ -33,7 +34,8 @@ import { AreaService } from "./service/area.service";
         AuthService, 
         CityService,
         CategoryService,
-        AreaService
+        AreaService,
+        UserService
     ],
     exports: [RouterModule]
 

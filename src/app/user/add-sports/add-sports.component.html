@@ -1,1 +1,73 @@
-<p>add-sports works!</p>
+<form [formGroup]="addSportForm" (ngSubmit)="addSport()">
+    <!-- <div class="form-group mb-3">
+        <input type="date" id="date" formControlName="date" class="form-control">
+    </div> -->
+    <div class="form-group mb-3">
+        <ng-container *ngIf="cities$ | async as cities">
+            <div class="form-group mb-3">
+                <select type="text" id="city" formControlName="city" class="form-select">
+                    <option value="" disabled selected>
+                        City
+                    </option>
+                    <option *ngFor="let city of cities" [value]="city.city">
+                        {{ city.city }}
+                    </option>
+                </select>
+            </div>
+        </ng-container>
+    </div>
+    <div class="form-group mb-3">
+        <ng-container *ngIf="areas$ | async as areas">
+            <div class="form-group mb-3">
+                <select type="text" id="area" formControlName="area" class="form-select">
+                    <option value="" disabled selected>
+                        Area
+                    </option>
+                    <option *ngFor="let area of areas" [value]="area.area">
+                        {{ area.area }}
+                    </option>
+                </select>
+            </div>
+        </ng-container>
+    </div>
+    <div class="form-group mb-3">
+        <ng-container *ngIf="sportCategories$ | async as sportCategories">
+            <div class="form-group mb-3">
+                <select type="text" id="sportsType" formControlName="sportsType" class="form-select">
+                    <option value="" disabled selected>
+                        Sports Type
+                    </option>
+                    <option *ngFor="let sportCategory of sportCategories" [value]="sportCategory.category">
+                        {{ sportCategory.category }}
+                    </option>
+                </select>
+            </div>
+        </ng-container>
+        <div class="form-group mb-3">
+            <label for="date">Date</label>
+            <input type="date" id="date" formControlName="date" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="time">Time</label>
+            <input type="time" id="time" formControlName="time" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="mobile">Mobile</label>
+            <input type="text" id="mobile" formControlName="mobile" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="WhatsappNumber">Whatsapp Number</label>
+            <input type="text" id="WhatsappNumber" formControlName="WhatsappNumber" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" id="name" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" id="email" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" id="location" formControlName="location" class="form-control">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary me-2">Add</button>
+</form>
