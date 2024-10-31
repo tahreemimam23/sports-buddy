@@ -15,6 +15,7 @@ import { CityService } from "./service/city.service";
 import { CategoryService } from "./service/category.service";
 import { AreaService } from "./service/area.service";
 import { UserService } from "./service/user.service";
+import { LoadingSpinnerModule } from "./loading-spinner/loading-spinner.module";
 
 @NgModule({
     declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { UserService } from "./service/user.service";
         LoginModule,
         AdminModule,
         UserModule,
+        LoadingSpinnerModule,
         HttpClientModule,
         RouterModule.forRoot(routes),
     ],

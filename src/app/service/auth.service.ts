@@ -8,7 +8,7 @@ import { userDetails } from '../model/user-details.model';
 })
 export class AuthService {
   userDetails: userDetails;
-  baseApi = "http://localhost:3000/user"
+  baseApi = "http://localhost:3000/user";
 
   constructor(private http: HttpClient) { }
 
