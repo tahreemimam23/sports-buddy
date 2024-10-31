@@ -41,8 +41,15 @@ export class AddSportsComponent {
   }
 
   addSport() {
-    console.log(this.addSportForm.value)
+    // console.log(this.addSportForm.value)
     if (this.addSportForm.valid) {
+      this.addSportForm.get('name').enable()
+      this.addSportForm.get('email').enable()
+      this.addSportForm.get('location').enable()
+      this.addSportForm.controls['name'].setValue(this.userDetails.name);
+      this.addSportForm.controls['email'].setValue(this.userDetails.email);
+      this.addSportForm.controls['location'].setValue(this.userDetails.location);
+      console.log(this.addSportForm.value)
       this.userService.addNewSport(this.addSportForm).subscribe(
         res => alert("added successfully"),
         error => alert("error occured"),
@@ -51,6 +58,9 @@ export class AddSportsComponent {
           this.addSportForm.controls['name'].setValue(this.userDetails.name);
           this.addSportForm.controls['email'].setValue(this.userDetails.email);
           this.addSportForm.controls['location'].setValue(this.userDetails.location);
+          this.addSportForm.get('name').disable()
+          this.addSportForm.get('email').disable()
+          this.addSportForm.get('location').disable()
         }
       )
     }

@@ -76,41 +76,27 @@
       "city": "Noida",
       "area": "Sector 49",
       "sportsType": "Tennis",
-      "date": "2024-10-31",
-      "time": "02:10",
-      "mobile": "9319827333",
+      "date": "2024-10-16",
+      "time": "18:17",
+      "mobile": "9821457646",
       "WhatsappNumber": "9319827333",
+      "name": "Tahreem Imam",
+      "email": "tahreem.imam1@gmail.com",
+      "location": "Noida",
       "id": 1
     },
     {
       "city": "Bengaluru",
       "area": "Marathalli",
       "sportsType": "Badminton",
-      "date": "2024-10-29",
-      "time": "01:11",
-      "mobile": "09821457646",
+      "date": "2024-10-16",
+      "time": "17:16",
+      "mobile": "9821457646",
       "WhatsappNumber": "9319827333",
+      "name": "Tahreem Imam",
+      "email": "tahreem.imam1@gmail.com",
+      "location": "Noida",
       "id": 2
-    },
-    {
-      "city": "Noida",
-      "area": "Sector 49",
-      "sportsType": "Tennis",
-      "date": "2024-10-29",
-      "time": "04:18",
-      "mobile": "09319827333",
-      "WhatsappNumber": "9319827333",
-      "id": 3
-    },
-    {
-      "city": "Noida",
-      "area": "Sector 49",
-      "sportsType": "Tennis",
-      "date": "2024-10-10",
-      "time": "02:21",
-      "mobile": "09319827333",
-      "WhatsappNumber": "9319827333",
-      "id": 4
     }
   ]
 }
