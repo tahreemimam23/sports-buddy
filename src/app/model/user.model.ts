@@ -1,5 +1,4 @@
 export class User {
-
     constructor(
         public email: string,
         public id: string,
@@ -13,18 +12,4 @@ export class User {
         }
         return this._token;
     }
-
-    // constructor(
-    //     id: string,
-    //     name: string,
-    //     password: string,
-    //     mobile: number,
-    //     address1: string,
-    //     address2: string,
-    //     pincode: number,
-    //     city: string,
-    //     gender: string,
-    //     role: string,
-    //     isActive: boolean,
-    // ) { }
 }

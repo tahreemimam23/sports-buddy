@@ -1,16 +1,16 @@
-export class userDetails {
-    constructor(public name: string, public email: string, public location: string) { }
+export class UserDetails {
+    constructor(
+        public id: string,
+        public email: string,
+        public name: string,
+        public mobile: number,
+        public address1: string,
+        public address2: string,
+        public pincode: number,
+        public city: string,
+        public gender: string,
+        public role: string,
+        public isActive: boolean,
+    ) { }
+
 }
-// export interface User {
-//     id: string;
-//     name: string;
-//     password: string;
-//     mobile: number;
-//     address1: string;
-//     address2: string;
-//     pincode: number;
-//     city: string;
-//     gender: string;
-//     role: string;
-//     isActive: boolean;
-// }

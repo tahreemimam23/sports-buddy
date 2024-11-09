@@ -1,19 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { userDetails } from '../model/user-details.model';
+import { UserData } from '../model/user-data.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  userDetails: userDetails;
+  userDetails: UserData;
   baseApi = "http://localhost:3000/user";
 
   constructor(private http: HttpClient) { }
 
   setUserDetails(userData) {
-    this.userDetails = new userDetails(userData.name, userData.id, userData.city)
+    this.userDetails = new UserData(userData.name, userData.id, userData.city)
     return this.userDetails
   }
 
