@@ -5,8 +5,9 @@ import { CityService } from '../../service/city.service';
 import { AreaService } from '../../service/area.service';
 import { CategoryService } from '../../service/category.service';
 import { AuthService } from '../../service/auth.service';
-import { userDetails } from '../../model/user-details.model';
+// import { userDetails } from '../../model/user-details.model';
 import { UserService } from '../../service/user.service';
+import { UserData } from '../../model/user-data.model';
 
 @Component({
   selector: 'cx-add-sports',
@@ -18,7 +19,7 @@ export class AddSportsComponent {
   cities$: Observable<any>;
   areas$: Observable<any>;
   sportCategories$: Observable<any>;
-  userDetails: userDetails;
+  userDetails: UserData;
 
   constructor(private cityService: CityService, private areaService: AreaService, private categoryService: CategoryService, private authService: AuthService, private userService: UserService) { }
 
