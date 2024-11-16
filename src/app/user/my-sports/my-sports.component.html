@@ -1,1 +1,17 @@
-<p>my-sports works!</p>
+<ng-container *ngIf="sports$| async as sports">
+    <ng-container *ngIf="sports.length > 0; else noSports">
+        <div class="border border-dark border-2 mt-5 mtb-5" *ngFor="let sport of sports">
+            <p>Sports: {{sport.sportsType}}</p>
+            <p>Name: {{sport.name}}</p>
+            <p>Date: {{sport.date}}</p>
+            <p>Time: {{sport.time}}</p>
+            <p>City: {{sport.city}} Area: {{sport.area}}</p>
+            <p>Email: {{sport.email}}</p>
+            <p>Call: {{sport.mobile}}</p>
+            <p>Chat: {{sport.WhatsappNumber}}</p>
+        </div>
+    </ng-container>
+    <ng-template #noSports>
+        <p>no sports</p>
+    </ng-template>
+</ng-container>
